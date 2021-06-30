@@ -1,0 +1,53 @@
+body {
+  font: 24px Helvetica;
+  background: black;
+  color: #999999;
+}
+
+#one {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 70vh;
+  background: url(imagenes/campus.jpg);
+  background-size: cover;
+}
+
+p {
+  font-size: 18px;
+}
+img {
+  border-radius: 1em;
+}
+
+.imagen {
+  width: 200px;
+  height: auto;
+}
+
+.subrayar {
+  text-decoration: underline;
+}
+
+.frase-texto {
+  color: #2f58a5;
+  font-size: 32px;
+}
+
+.frase {
+  background: #e8ced4;
+  height: auto;
+}
+
+nav {
+  position: fixed;
+}
+.footer {
+  background: darkslategray;
+  color: ghostwhite;
+}
+textarea {
+  resize: none;
+}
