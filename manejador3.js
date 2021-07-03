@@ -1,16 +1,36 @@
-let liga = prompt(
-  "Elige la divisional, el precio cambiará si quiere jugar en la divisional A o en la divisional B"
-).toUpperCase();
+function alerta() {
+  let mensaje;
+  let opcion = prompt("Quiere jugar en la divisional 1");
 
-function precio (liga) {
-    if (liga.toUpperCase() = "A") {
-        return alert("deberán pagar $4000 la inscripción")
-      } else 
-      {alert("deberán pagar $2000 la inscripción")
-    }
+  if (opcion == null || opcion == "") {
+    mensaje = "Has cancelado o introducido el nombre vacío";
+  } else if (opcion.toLowerCase() == "si" || opcion.toLowerCase() == "sí") {
+    mensaje = "El precio de inscripción es de $4000";
+  } else {
+    mensaje = "El precio de inscripción es de $2000";
+  }
+  document.getElementById("ejemplo").innerHTML = mensaje;
 }
 
+/*let consulta = prompt("quiere jugar en la división 1?").toUpperCase();
+let resultado = 0;
 
+function porcentaje(num) {
+  if (num > 0) {
+    var resultado = num * 0.21;
+    var civa = resultado + num;
+    return (document.getElementById("caja 1").innerHTML =
+      "<h2>El importe total con iva es de: $ " + (resultado + num));
+    ("</h2>");
+  } else {
+    alert("ingrese un numero positivo");
+  }
+}
+/*
+let total = precio * 0.21;
+alert("El precio es de: " + total);
+
+let total = precio * 0.21;
 /*let precio = (divi, iva) => {
   return divi * iva;
 };

@@ -30,6 +30,13 @@ img {
 .subrayar {
   text-decoration: underline;
 }
+.btn {
+  background-color: darkslategray;
+  color: red;
+  text-decoration-style: solid;
+  border-radius: 0.5em;
+  border-color: red;
+}
 
 .frase-texto {
   color: #2f58a5;
