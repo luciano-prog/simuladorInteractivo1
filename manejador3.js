@@ -11,4 +11,4 @@ function alerta() {
   }
   document.getElementById("ejemplo").innerHTML = mensaje;
 }
-console.log(alerta);
+alerta();
