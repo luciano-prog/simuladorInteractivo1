@@ -82,25 +82,43 @@
           </div>
         </section>
         <hr/>
-        <section>
-          <div class="container">
-            <p class="ingrese"> Ingrese Equipo</p>
-            <form action="">
-              <input id= "nombre" type="text" placeholder="Ingrese nombre de equipo" class="form-control">
-              <input id="edad" type="text" placeholder="ingrese nombre del capitan">
-              <button></button>
-            </form>
-          </div>
-          <div class="container">
-            <table class="table" id="tabla">
-              <thead class="thead-inverse">
-                <tr>
-                  <th>Nombre de Equipo</th>
-                  <th>Nombre del capitan</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
+        <section class="container-fluid">
+          <h2 class="text-center">Contacto</h2>
+          <div class="row mt-5 justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-xs-12">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <label for="nombre" >Nombre del Equipo <span class="text-danger"> *</span></label>
+                  <input
+                    id="nombre"
+                    type="text"
+                    class="form-control"
+                    required
+                    placeholder="Nombre del equipo"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="mail">Correo electronico <span class="text-danger">*</span></label>
+                  <input
+                    id="mail"
+                    type="email"
+                    class="form-control"
+                    placeholder="ejemplo@correo.com.ar"
+                  />
+                </div>
+                <div class="row mt-5 justify-content-center">
+                  <button class="btn btn-outline-secondary btn-block" type="reset" onclick="capturar();">Enviar 📦</button>
+                </div>
+                <div class="container">
+                  <table class="table" id="tabla">
+                    <thead class="thead-inverse">
+                      <tr>
+                        <th>Nombre de Equipo</th>
+                        <th>Correo</th>
+                      </tr>
+                  </table>
+                </div>  
+              </form>
         </section>    
     <footer class="container-fluid mt-5 footer">
         <div class="row justify-content-center align-items-center">

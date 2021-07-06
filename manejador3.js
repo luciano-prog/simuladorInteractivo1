@@ -12,3 +12,30 @@ function alerta() {
   document.getElementById("ejemplo").innerHTML = mensaje;
 }
 alerta();
+
+let baseDatos = [];
+function agregar() {
+  baseDatos.push(nuevoEquipo);
+  console.log(baseDatos);
+  document.getElementById("tabla").innerHTML +=
+    "<tbody><td>" +
+    nuevoEquipo.nombre +
+    "</td><td>" +
+    nuevoEquipo.correo +
+    "</td></tbody>";
+}
+
+function capturar() {
+  //console.log("capturado");
+  function Equipo(nombre, correo) {
+    this.nombre = nombre;
+    this.correo = correo;
+  }
+  let nombreCapturar = document.getElementById("nombre").value;
+  //console.log(nombreCapturar);
+  let correoCapturar = document.getElementById("mail").value;
+
+  nuevoEquipo = new Equipo(nombreCapturar, correoCapturar);
+  console.log(nuevoEquipo);
+  agregar();
+}

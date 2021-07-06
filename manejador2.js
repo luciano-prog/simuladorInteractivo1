@@ -3,24 +3,38 @@ let consulta = prompt(
 ).toUpperCase();
 
 //alert(" Disfruta del futbol y recomendanos a tus amigos⚽");
-while (consulta != "ESC") {
+while (consulta.toUpperCase() != "ESC") {
   switch (consulta.toUpperCase()) {
-    case "SI" || "SÍ":
+    case "SI" || "SÍ" || "si" || "sí":
       alert("Bienvenido al torneo ⚽🎈");
-      break;
-    case "NO":
+
+    case "NO" || "no":
       alert("Recomendanos con tus amigos⚽🎈");
-      break;
+
     default:
       alert("Gracias por visitar nuestro sitio 😀😁✨");
-      break;
   }
   consulta = prompt(
-    "quiere ingresar a nuestro torneo de futbol? sino escriba ESC".toUpperCase()
+    "quiere ingresar a nuestro torneo de futbol? si ya respondió escriba ESC".toUpperCase()
   );
 }
 
 let baseDatos = [];
+baseDatos.sort();
+
+/*baseDatos.sort((a, b) => {
+  const nombreA = a.nombre.toUpperCase();
+  const nombreB = b.nombre.toUpperCase();
+
+  if (nombreA < nombreB) {
+    return -1;
+  }
+  if (nombreA > nombreB) {
+    return 1;
+  }
+  return 0;
+});*/
+
 function agregar() {
   baseDatos.push(nuevoEquipo);
   console.log(baseDatos);
@@ -42,7 +56,11 @@ function capturar() {
   //console.log(nombreCapturar);
   let correoCapturar = document.getElementById("mail").value;
 
-  nuevoEquipo = new Equipo(nombreCapturar, correoCapturar);
+  let nombre1 = prompt("repita el nombre de su equipo");
+
+  let correo1 = prompt("repita el correo electrónico");
+
+  nuevoEquipo = new Equipo(nombre1, correo1);
   console.log(nuevoEquipo);
   agregar();
 }
