@@ -10,10 +10,10 @@ function alerta() {
     mensaje = "El precio de inscripción es de $2000";
   }
   document.getElementById("ejemplo").innerHTML = mensaje;
-}
+} //la funcion pregunta en la divisional que quiere jugar. si no elige la 1, el botón q establece en el archivo precio.html permite conocer el preico por jugar en la divisional 1 y la muestra escrita en el html.
 alerta();
 
-let baseDatos = [];
+let baseDatos = []; //aquí hago una base de datos con array vacío de los equipos que se inscriban
 function agregar() {
   baseDatos.push(nuevoEquipo);
   console.log(baseDatos);
@@ -23,19 +23,22 @@ function agregar() {
     "</td><td>" +
     nuevoEquipo.correo +
     "</td></tbody>";
-}
+} //aquí establezco la función agregar para que se escriban los equipos en la tabla.
 
 function capturar() {
-  //console.log("capturado");
   function Equipo(nombre, correo) {
     this.nombre = nombre;
     this.correo = correo;
   }
-  let nombreCapturar = document.getElementById("nombre").value;
-  //console.log(nombreCapturar);
-  let correoCapturar = document.getElementById("mail").value;
+  let nombreCapturar = document.getElementById("nombre").value; //tomo los datos escritos en la tabla
 
-  nuevoEquipo = new Equipo(nombreCapturar, correoCapturar);
+  let correoCapturar = document.getElementById("mail").value; //tomo los datos escritos en la tabla
+
+  let nombre1 = prompt("repita el nombre de su equipo"); //realizó un prompt para confirmar los datos
+
+  let correo1 = prompt("repita el correo electrónico"); //realizó un prompt para confirmar los datos
+
+  nuevoEquipo = new Equipo(nombre1, correo1); //aquí creo el constructor del nuevo equipo.
   console.log(nuevoEquipo);
   agregar();
-}
+} //esta funcion permite conseguir los datos escritos en el formulario y volcarlo en la tabla.Previa pregunta para confirmar los datos.

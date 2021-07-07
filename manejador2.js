@@ -1,40 +1,25 @@
 let consulta = prompt(
   "quiere ingresar a nuestro torneo de futbol? sino escriba ESC"
-).toUpperCase();
+).toUpperCase(); // aquí solicito que responda si quiere ingresar al torneo y que si no escriba ESC. Todo lo pasa a mayúscula
 
-//alert(" Disfruta del futbol y recomendanos a tus amigos⚽");
-while (consulta.toUpperCase() != "ESC") {
-  switch (consulta.toUpperCase()) {
+while (consulta != "ESC") {
+  switch (consulta) {
     case "SI" || "SÍ" || "si" || "sí":
-      alert("Bienvenido al torneo ⚽🎈");
-
+      alert("Bienvenido al torneo 🎈⚽");
+      break;
     case "NO" || "no":
-      alert("Recomendanos con tus amigos⚽🎈");
-
+      alert("Recomendanos con tus amigos🎈⚽");
+      break;
     default:
-      alert("Gracias por visitar nuestro sitio 😀😁✨");
+      alert("Gracias por visitar nuestro sitio 😀✨");
   }
   consulta = prompt(
     "quiere ingresar a nuestro torneo de futbol? si ya respondió escriba ESC".toUpperCase()
-  );
+  ); // en este while, lo que hago es que salvo que se escriba la funcion ESC(en mayúscula)se ejecuta el switch, que posee case sí o no y un default. Si se elige no, no se continua con la inscripción en el formulario. Más allá que haya puesto el upperCase, consideré la posibilidad de que se escriba en minúscula.
 }
 
 let baseDatos = [];
-baseDatos.sort();
-
-/*baseDatos.sort((a, b) => {
-  const nombreA = a.nombre.toUpperCase();
-  const nombreB = b.nombre.toUpperCase();
-
-  if (nombreA < nombreB) {
-    return -1;
-  }
-  if (nombreA > nombreB) {
-    return 1;
-  }
-  return 0;
-});*/
-
+//aquí hago una base de datos con array vacío de los equipos que se inscriban
 function agregar() {
   baseDatos.push(nuevoEquipo);
   console.log(baseDatos);
@@ -44,41 +29,22 @@ function agregar() {
     "</td><td>" +
     nuevoEquipo.correo +
     "</td></tbody>";
-}
+} //aquí establezco la función agregar para que se escriban los equipos en la tabla.
 
 function capturar() {
-  //console.log("capturado");
   function Equipo(nombre, correo) {
     this.nombre = nombre;
     this.correo = correo;
   }
-  let nombreCapturar = document.getElementById("nombre").value;
-  //console.log(nombreCapturar);
-  let correoCapturar = document.getElementById("mail").value;
+  let nombreCapturar = document.getElementById("nombre").value; //tomo los datos escritos en la tabla
 
-  let nombre1 = prompt("repita el nombre de su equipo");
+  let correoCapturar = document.getElementById("mail").value; //tomo los datos escritos en la tabla
 
-  let correo1 = prompt("repita el correo electrónico");
+  let nombre1 = prompt("repita el nombre de su equipo"); //realizó un prompt para confirmar los datos
 
-  nuevoEquipo = new Equipo(nombre1, correo1);
+  let correo1 = prompt("repita el correo electrónico"); //realizó un prompt para confirmar los datos
+
+  nuevoEquipo = new Equipo(nombre1, correo1); //aquí creo el constructor del nuevo equipo.
   console.log(nuevoEquipo);
   agregar();
-}
-
-/*
-class Equipo {
-  constructor(nombre, canti, direc) {
-    this.nombre = nombre;
-    this.canti = canti;
-    this.direc = direc;
-  }
-  hablar() {
-    alert("Ya te contactaremos para inscribirte " + this.nombre);
-  }
-}
-const equipo1 = new Equipo(
-  prompt("escribe el nombre de tu equipo"),
-  11,
-  prompt("escribe la dirección de tu equipo")
-);
-console.log(equipo1.hablar());*/
+} //esta funcion permite conseguir los datos escritos en el formulario y volcarlo en la tabla.Previa pregunta para confirmar los datos.
