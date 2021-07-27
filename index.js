@@ -1,19 +1,28 @@
-function alerta() {
-  let mensaje;
-  let opcion = prompt("Quiere jugar en la divisional 1");
+//entidad
+//variables
+let consulta = prompt(
+  "quiere ingresar a nuestro torneo de futbol? sino escriba ESC"
+).toUpperCase(); // aquí solicito que responda si quiere ingresar al torneo y que si no escriba ESC. Todo lo pasa a mayúscula
 
-  if (opcion == null || opcion == "") {
-    mensaje = "Has cancelado o introducido el nombre vacío";
-  } else if (opcion.toLowerCase() == "si" || opcion.toLowerCase() == "sí") {
-    mensaje = "El precio de inscripción es de $4000";
-  } else {
-    mensaje = "El precio de inscripción es de $2000";
+while (consulta != "ESC") {
+  switch (consulta) {
+    case "SI" || "SÍ" || "si" || "sí":
+      alert("Bienvenido al torneo 🎈⚽");
+      break;
+    case "NO" || "no":
+      alert("Recomendanos con tus amigos🎈⚽");
+      break;
+    default:
+      alert("Gracias por visitar nuestro sitio 😀✨");
   }
-  document.getElementById("ejemplo").innerHTML = mensaje;
-} //la funcion pregunta en la divisional que quiere jugar. si no elige la 1, el botón q establece en el archivo precio.html permite conocer el preico por jugar en la divisional 1 y la muestra escrita en el html.
-alerta();
+  consulta = prompt(
+    "quiere ingresar a nuestro torneo de futbol? si ya respondió escriba ESC".toUpperCase()
+  ); // en este while, lo que hago es que salvo que se escriba la funcion ESC(en mayúscula)se ejecuta el switch, que posee case sí o no y un default. Si se elige no, no se continua con la inscripción en el formulario. Más allá que haya puesto el upperCase, consideré la posibilidad de que se escriba en minúscula.
+}
 
-let baseDatos = []; //aquí hago una base de datos con array vacío de los equipos que se inscriban
+let baseDatos = [];
+//aquí hago una base de datos con array vacío de los equipos que se inscriban
+//funciones
 function agregar() {
   baseDatos.push(nuevoEquipo);
   console.log(baseDatos);
