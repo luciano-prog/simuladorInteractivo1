@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="style1.css" rel="stylesheet"/>
+    <link href="../style1.css" rel="stylesheet"/>
     <title>TpSimuladorInteractivo</title>
 </head>
 
-<body id="about">
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -18,10 +18,10 @@
                 <a class="nav-link text-danger" href="index.html">Home<span class="sr-only"></span></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link text-danger" href="precio.html">Precio</a>
+                <a class="nav-link text-danger" href="../precio/precio.html">Precios</a>
               </li>
               <li>
-                <a class="nav-link text-danger" href="#frase">Estadísticas</a>
+                <a class="nav-link text-danger" href="../estadi/estadi.html">Estadísticas</a>
               </li>
             </ul>
           </div>
@@ -36,18 +36,11 @@
         </div>
     </header>
 
-    <div class="container mt-5 text-center ">
-      <p id="ejemplo">Aquí se mostrará el precio</p>
- 
-      <button onclick="alerta()" class="btn">Quieres saber el precio de jugar en la division 1</button>
-
-    </div>
-
-    <div class="container mt-5" id="about">
+    <div class="container mt-5">
        <h2 class="text-center mt-3">Información acerca de nosotros</h2>
         <div class="row mt-5">
           <div class="col-xl-4 col-lg-6 col-xs-12 p-5 tomato">
-            <img src="imagenes/sl.jpg" width="250px" height="auto"/>
+            <img src="../imagenes/sl.jpg" width="250px" height="auto"/>
           </div>
         <div class="col-xl-8 col-lg-6 col-xs-12 pl-2 pr-3 mt-5 pt-5">
             <p class="text-white">Somos el torneo de futbol 9 con canchas en perfecto estado, situadas en una ubicación inmejorable con más de 30 años de experiencia en la ciudad.</p>
@@ -61,9 +54,10 @@
             </p>
         </div>
         <div class="col-xl-4 col-lg-6 col-xs-12 p-5">
-            <img src="imagenes/hermanos mari.jpg" width="250px" height="auto" />
+            <img src="../imagenes/hermanos mari.jpg" width="250px" height="auto" />
         </div>
     </div>
+  
         <section id="skills" class="container">
           <h2 class="text-center">Si quieres anotarte, registrate llamanos al 📞011-509877☎</h2>
         </section>
@@ -73,15 +67,16 @@
           <div class="row justify-content-center">
             <div class="col-4 m-2 pt-5 pb-5">
               <h3 class=" frase-texto">Los premios</h3>
-              <img src="imagenes/premios.jpg" width="250px" height="auto" /> 
+              <img src="../imagenes/premios.jpg" width="250px" height="auto" /> 
             </div>
             <div class="col-4 m-2 pt-5 pb-5">
                 <h3 class=" frase-texto">Las anécdotas</h3>
-                <img src="imagenes/jugadores.jpg" width="250px" height="auto" />
+                <img src="../imagenes/jugadores.jpg" width="250px" height="auto" />
             </div>  
           </div>
         </section>
         <hr/>
+
         <section class="container-fluid">
           <h2 class="text-center">Contacto</h2>
           <div class="row mt-5 justify-content-center">
@@ -119,7 +114,8 @@
                   </table>
                 </div>  
               </form>
-        </section>    
+        </section>
+
     <footer class="container-fluid mt-5 footer">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-3 col-md-3 col-12">
@@ -149,6 +145,6 @@
           </div>
         </div>
     </footer>
-    <script src="precio.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

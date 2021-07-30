@@ -1,5 +1,6 @@
 //entidades
 let baseDatos = []; //aquí hago una base de datos con array vacío de los equipos que se inscriban
+
 let nombreCapturar = document.getElementById("nombre").value; //tomo los datos escritos en la tabla
 
 let correoCapturar = document.getElementById("mail").value; //tomo los datos escritos en la tabla
@@ -7,6 +8,15 @@ let correoCapturar = document.getElementById("mail").value; //tomo los datos esc
 let nombre1 = prompt("repita el nombre de su equipo"); //realizó un prompt para confirmar los datos
 
 let correo1 = prompt("repita el correo electrónico"); //realizó un prompt para confirmar los datos
+
+let jugadores = prompt("ingrese su jugador estrella");
+
+//ejercicio del desafio complementario numero 9
+let node = document.createElement("LI"); // Creo a <li> node
+let textnode = document.createTextNode(jugadores); // Creo a text node
+node.appendChild(textnode); // Append the text to <li>
+document.getElementById("array").appendChild(node);
+
 //funciones
 function alerta() {
   let mensaje;
