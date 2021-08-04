@@ -5,13 +5,12 @@ let nombreCapturar = document.getElementById("nombre").value; //tomo los datos e
 
 let correoCapturar = document.getElementById("mail").value; //tomo los datos escritos en la tabla
 
-let nombre1 = prompt("repita el nombre de su equipo"); //realizó un prompt para confirmar los datos
-
-let correo1 = prompt("repita el correo electrónico"); //realizó un prompt para confirmar los datos
-
-let jugadores = prompt("ingrese su jugador estrella");
-
 //ejercicio del desafio complementario numero 9
+
+let jugadores = "maradona";
+
+console.log(jugadores);
+
 let node = document.createElement("LI"); // Creo a <li> node
 let textnode = document.createTextNode(jugadores); // Creo a text node
 node.appendChild(textnode); // Append the text to <li>
@@ -49,7 +48,9 @@ function capturar() {
     this.nombre = nombre;
     this.correo = correo;
   }
+  let nombre1 = prompt("repita el nombre de su equipo"); //realizó un prompt para confirmar los datos
 
+  let correo1 = prompt("repita el correo electrónico"); //realizó un prompt para confirmar los datos
   nuevoEquipo = new Equipo(nombre1, correo1); //aquí creo el constructor del nuevo equipo.
   console.log(nuevoEquipo);
   agregar();

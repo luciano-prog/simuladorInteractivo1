@@ -1,5 +1,22 @@
-//variables
+const equipos = [
+  { id: 1, equipo: "Misti", puntos: 20 },
+  { id: 2, equipo: "Extravagancia", puntos: 18 },
+  { id: 3, equipo: "Menoscherano", puntos: 15 },
+  { id: 4, equipo: "Flancitos", puntos: 13 },
+];
 
+const guardarLocal = (clave, valor) => {
+  localStorage.setItem(clave, valor);
+};
+
+//Almacenamos producto por producto
+for (const equipo of equipos) {
+  guardarLocal(equipo.id, JSON.stringify(equipo));
+}
+// o almacenamos el array completo
+guardarLocal("listaEquipos", JSON.stringify(equipos));
+
+//entidades
 let one = document.getElementById("1");
 one.insertAdjacentHTML(
   "afterend",
@@ -22,6 +39,14 @@ let estadisticas1 = document.querySelector("#tablaEstadisticas");
 estadisticas1.style.display = "none";
 
 let boton = document.getElementById("toca");
+//variables
+
+//funciones
+function myFunction() {
+  let element = document.body;
+  element.classList.toggle("light-mode");
+}
+
 boton.onclick = () => {
   if (estadisticas1.style.display === "none") {
     estadisticas1.style.display = "block";
