@@ -17,20 +17,18 @@ node.appendChild(textnode); // Append the text to <li>
 document.getElementById("array").appendChild(node);
 
 //funciones
-function alerta() {
-  let mensaje;
-  let opcion = prompt("Quiere jugar en la divisional 1");
 
-  if (opcion == null || opcion == "") {
-    mensaje = "Has cancelado o introducido el nombre vacío";
-  } else if (opcion.toLowerCase() == "si" || opcion.toLowerCase() == "sí") {
-    mensaje = "El precio de inscripción es de $4000";
-  } else {
-    mensaje = "El precio de inscripción es de $2000";
-  }
-  document.getElementById("ejemplo").innerHTML = mensaje;
-} //la funcion pregunta en la divisional que quiere jugar. si no elige la 1, el botón q establece en el archivo precio.html permite conocer el preico por jugar en la divisional 1 y la muestra escrita en el html.
-alerta();
+function cambio() {
+  let mensaje = "El precio de inscripción es de $4000";
+  let node = document.createElement("p");
+  let textnode = document.createTextNode(mensaje);
+  node.appendChild(textnode);
+  document.getElementById("ejemplo").appendChild(node);
+}
+
+document.getElementById("botón").onclick = function () {
+  cambio();
+};
 
 function agregar() {
   baseDatos.push(nuevoEquipo);
