@@ -1,17 +1,9 @@
-// aquí solicito que responda si quiere ingresar al torneo y que si no escriba ESC. Todo lo pasa a mayúscula
-
-/*let input = document.querySelector("input");
-let log = document.getElementById("valores");
-
-input.addEventListener("input", updateValue);
-
-function updateValue(log) {
-  if ((log = "SI" || "SÍ" || "si" || "sí")) {
-    alert("Bienvenido al torneo 🎈⚽"); //HACER ANIMACIÓN
-  } else {
-    alert("Recomendanos con tus amigos🎈⚽"); //HACER ANIMACIÓN
-  }
-}*/
+function mySecondFunction() {
+  $("#body").prepend(
+    '<p id="i9">Queda una sola vacante para anotarse y ya se está yendo</p>'
+  );
+  $("#i9").css("color", "red").slideUp(10000).slideDown(10000);
+}
 
 function myFunction() {
   let x = document.getElementById("frm1").target;
