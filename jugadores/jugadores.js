@@ -17,6 +17,10 @@ $("#btn1").click(() => {
   $("#div1").fadeIn(1000);
 });
 
+//variables globales
+
+let buttonClicked = false;
+
 //código referido a mostrar los jugadores libres disponibles mediante la utilización de ajax y texto plano.
 $(document).ready(function () {
   //Declaro la url del API
@@ -24,55 +28,32 @@ $(document).ready(function () {
   //Declaro la información a enviar
   const infoPost = {
     nombre: "Beckham",
-    /*imagen: $(
-      `<img src="../imagenes/beckham.jpg" width="50px" height="auto"/>`
-    ),*/
     nombre2: "Bermudez",
-    /*imagen: $(
-      `<img src="../imagenes/bermudez.jpg" width="50px" height="auto"/>`
-    ),*/
     nombre3: "Batistuta",
-    /*imagen: $(`<img src="../imagenes/bati.jpg" width="50px" height="auto"/>`),*/
   };
-  //Agregamos un botón con jQuery
+  //Agrego un botón con jQuery
   $("#p2").prepend(
     '<div class="text-center"><button class="btn btn-primary mt-3" id="btn2">Ver jugadores libres</button></div>'
   );
   //Escucho el evento click del botón agregado
+
   $("#btn2").click(() => {
-    $.ajax({
-      method: "POST",
-      url: APIURL,
-      data: infoPost,
-      success: function (respuesta) {
-        $("#lista").prepend(
-          `<div class="text-center">${respuesta.nombre}</div>`
-        );
-      },
-    });
-    $("#btn2").click(() => {
-      $.ajax({
-        method: "POST",
-        url: APIURL,
-        data: infoPost,
-        success: function (respuesta) {
-          $("#lista").prepend(
-            `<div class="text-center">${respuesta.nombre2}</div>`
-          );
-        },
-      });
-    });
-    $("#btn2").click(() => {
-      $.ajax({
-        method: "POST",
-        url: APIURL,
-        data: infoPost,
-        success: function (respuesta) {
-          $("#lista").prepend(
-            `<div class="text-center">${respuesta.nombre3}</div>`
-          );
-        },
-      });
-    });
+    if (buttonClicked === false) {
+      {
+        $.ajax({
+          method: "POST",
+          url: APIURL,
+          data: infoPost,
+          success: function (respuesta) {
+            $("#lista").prepend(
+              `<div class="text-center">${respuesta.nombre}</div>
+            <div class="text-center">${respuesta.nombre2}</div>
+            <div class="text-center">${respuesta.nombre3}</div>`
+            );
+          },
+        });
+      }
+      buttonClicked = true;
+    }
   });
 });

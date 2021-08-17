@@ -1,4 +1,6 @@
 //entidades
+let buttonCliked = false;
+
 let baseDatos = []; //aquí hago una base de datos con array vacío de los equipos que se inscriban
 
 let nombreCapturar = document.getElementById("nombre").value; //tomo los datos escritos en la tabla
@@ -18,13 +20,15 @@ document.getElementById("array").appendChild(node);
 
 //funciones
 function cambio() {
-  let mensaje = "El precio de inscripción es de $4000";
-  let node = document.createElement("p");
-  let textnode = document.createTextNode(mensaje);
-  node.appendChild(textnode);
-  document.getElementById("ejemplo").appendChild(node);
+  if (buttonCliked === false) {
+    let mensaje = "El precio de inscripción es de $4000";
+    let node = document.createElement("p");
+    let textnode = document.createTextNode(mensaje);
+    node.appendChild(textnode);
+    document.getElementById("ejemplo").appendChild(node);
+  }
+  buttonCliked = true;
 }
-
 document.getElementById("botón").onclick = function () {
   cambio();
 };
