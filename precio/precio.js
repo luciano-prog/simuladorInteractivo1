@@ -7,7 +7,7 @@ let correoCapturar = document.getElementById("mail").value; //tomo los datos esc
 
 //ejercicio del desafio complementario numero 9
 
-let jugadores = "maradona";
+let jugadores = "Ej.: Diego Maradona";
 
 console.log(jugadores);
 
@@ -17,7 +17,6 @@ node.appendChild(textnode); // Append the text to <li>
 document.getElementById("array").appendChild(node);
 
 //funciones
-
 function cambio() {
   let mensaje = "El precio de inscripción es de $4000";
   let node = document.createElement("p");
