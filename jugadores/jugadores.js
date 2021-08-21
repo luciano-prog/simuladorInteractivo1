@@ -33,7 +33,7 @@ $(document).ready(function () {
   };
   //Agrego un botón con jQuery
   $("#p2").prepend(
-    '<div class="text-center"><button class="btn btn-primary mt-3" id="btn2">Ver jugadores libres</button></div>'
+    '<div class="text-center"><button class="btn btn-primary mt-3" id="btn2">Ver jugadores Estrella libres</button></div>'
   );
   //Escucho el evento click del botón agregado
 
@@ -57,3 +57,21 @@ $(document).ready(function () {
     }
   });
 });
+
+// aquí voy a consumir una api para mostrar la totalidad de los jugadores libres
+const API_URL = "http://jsonplaceholder.typicode.com";
+const HTMLResponse = document.querySelector("#libres");
+const ul = document.createElement("ul");
+
+fetch(`${API_URL}/users`)
+  .then((response) => response.json())
+  .then((users) => {
+    users.forEach((user) => {
+      let elem = document.createElement("li");
+      elem.appendChild(
+        document.createTextNode(`⚽  ${user.name}   📧  ${user.email}`)
+      );
+      ul.appendChild(elem);
+    }),
+      HTMLResponse.appendChild(ul);
+  });

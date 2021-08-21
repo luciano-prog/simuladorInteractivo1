@@ -1,3 +1,4 @@
+//---------------funciones------------------
 function mySecondFunction() {
   $("#body").prepend(
     '<p id="i9">Queda una sola vacante para anotarse y ya se está yendo</p>'
@@ -12,10 +13,11 @@ function myFunction() {
   }
 }
 
+//--------------------------------------------------
 let baseDatos = [];
 //aquí hago una base de datos con array vacío de los equipos que se inscriban
 
-//funciones
+//----------------------------------funcion(se estableció aquí por un tema de funcionamiento)----------------
 function agregar() {
   baseDatos.push(nuevoEquipo);
   console.log(baseDatos);
@@ -27,16 +29,19 @@ function agregar() {
     "</td></tbody>";
 } //aquí establezco la función agregar para que se escriban los equipos en la tabla.
 
+//--------variables----------------
 let nombreCapturar = document.getElementById("nombre").value; //tomo los datos escritos en la tabla
 
 let correoCapturar = document.getElementById("mail").value; //tomo los datos escritos en la tabla
 
+//---------------------------funcion (se estableció aquí por un tema de funcionamiento)----------------
 function capturar() {
   function Equipo(nombre, correo) {
     this.nombre = nombre;
     this.correo = correo;
   }
 
+  //------ más variables---------------------
   let nombre1 = prompt("repita el nombre de su equipo"); //realizó un prompt para confirmar los datos
 
   let correo1 = prompt("repita el correo electrónico"); //realizó un prompt para confirmar los datos

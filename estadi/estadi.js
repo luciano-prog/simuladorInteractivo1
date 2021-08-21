@@ -1,3 +1,4 @@
+//---------const de equipos-------------
 const equipos = [
   { id: 1, equipo: "Misti", puntos: 20 },
   { id: 2, equipo: "Extravagancia", puntos: 18 },
